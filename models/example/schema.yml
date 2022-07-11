@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: my_first_dbt_model
+    description: "Record Date on 2022-01-04"
+    columns:
+      - name: SYMBOL 
+        description: "Stock symbol"
+        tests:
+          - unique
+          - not_null
+
+  - name: my_second_dbt_model
+    description: "Stocks in the U.S."
+    columns:
+      - name: OPEN
+        description: "Opening price"
+        tests:
+          - not_null

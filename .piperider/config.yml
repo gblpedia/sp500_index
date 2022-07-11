@@ -1,0 +1,9 @@
+dataSources:
+- name: sp500_index
+  type: sqlite
+  dbt:
+    profile: sp500_index
+    target: dev
+    projectDir: .
+telemetry:
+  id: 6ea66a5dda5b4931b99136df8176438c
