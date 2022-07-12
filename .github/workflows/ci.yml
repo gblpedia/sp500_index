@@ -17,6 +17,9 @@ jobs:
 
       - name: download crypto library
         run: curl -o crypto.so https://github.com/nalgeon/sqlean/releases/download/0.15.2/crypto.so
+      
+      - name: List files in the repository
+        run: ls ${{ github.workspace }}
 
       - name: PipeRider CLI Action
         uses: InfuseAI/piperider-action@v0.4.1
