@@ -13,7 +13,7 @@ with source_data as (
 
     select * from PRICE
     left join SYMBOL ON SYMBOL.SYMBOL = PRICE.SYMBOL
-    WHERE PRICE.DATE = '2022-01-04' 
+    WHERE PRICE.DATE = '2022-01-05' 
 )
 
 select *
