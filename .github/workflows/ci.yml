@@ -16,11 +16,14 @@ jobs:
         uses: actions/checkout@v3
 
       - name: download crypto library
-        run: curl -o crypto.so https://github.com/nalgeon/sqlean/releases/download/0.15.2/crypto.so
+        run: curl -LJO https://github.com/nalgeon/sqlean/releases/download/0.15.2/crypto.so
+
+      - name: ls workspace
+        run: ls -alF
       
       - name: change mode 
         run: chmod 777 crypto.so
-        
+
       - name: ls workspace
         run: ls -alF
 
