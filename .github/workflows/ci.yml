@@ -18,8 +18,8 @@ jobs:
       - name: download crypto library
         run: curl -o crypto.so https://github.com/nalgeon/sqlean/releases/download/0.15.2/crypto.so
       
-      - name: ls workspace
-        run: ls -alF
+      - name: change mode 
+        run: chmod 777 crypto.so
 
       - name: PipeRider CLI Action
         uses: InfuseAI/piperider-action@v0.4.1
