@@ -20,6 +20,7 @@ jobs:
       
       - name: change mode 
         run: chmod 777 crypto.so
+        run: ls -alF
 
       - name: PipeRider CLI Action
         uses: InfuseAI/piperider-action@v0.4.1
