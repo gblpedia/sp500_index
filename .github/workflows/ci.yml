@@ -15,6 +15,9 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
 
+      - name: download crypto library
+        run: curl -o crypto.so https://github.com/nalgeon/sqlean/releases/download/0.15.2/crypto.so
+
       - name: PipeRider CLI Action
         uses: InfuseAI/piperider-action@v0.4.1
         id: piperider
