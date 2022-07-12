@@ -7,7 +7,7 @@ sp500_index:
       database: sp500
       schema: 'main'
       schemas_and_paths:
-        main: 'sp500.db'
+        main: '${{ github.workspace }}/sp500.db'
       schema_directory: '${{ github.workspace }}'
       extensions:
         - '${{ github.workspace }}/crypto.arm64'
