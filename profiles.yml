@@ -10,6 +10,6 @@ sp500_index:
         main: 'sp500.db'
       schema_directory: '.'
       extensions:
-        - 'crypto'
+        - './crypto.so'
 
   target: dev
