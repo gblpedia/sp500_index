@@ -1,4 +1,4 @@
-dbt-snowflake==1.1.0
+#dbt-snowflake==1.1.0
+#snowflake-sqlalchemy==1.3.4
 dbt-sqlite
-snowflake-sqlalchemy==1.3.4
 piperider
