@@ -1,4 +1,6 @@
 name: piperider-ci
+env:
+  ACTIONS_STEP_DEBUG: true
 
 on:
   pull_request:
@@ -15,15 +17,11 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
 
+      - name: download crypto library
+        run: curl -LJO https://github.com/nalgeon/sqlean/releases/download/0.15.2/crypto.so
+
       - name: PipeRider CLI Action
-        uses: InfuseAI/piperider-action@v0.4.0
+        uses: InfuseAI/piperider-action@v0.4.1
         id: piperider
-        env:
-          SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
-          SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
-          SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
-          SNOWFLAKE_ROLE: ${{ secrets.SNOWFLAKE_ROLE }}
-          SNOWFLAKE_DATABASE: ${{ secrets.SNOWFLAKE_DATABASE }}
-          SNOWFLAKE_SCHEMA: ${{ secrets.SNOWFLAKE_SCHEMA }}
-          SNOWFLAKE_WAREHOUSE: ${{ secrets.SNOWFLAKE_WAREHOUSE }}
+        env: 
           DBT_PROFILES_DIR: ${{ github.workspace }} 

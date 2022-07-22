@@ -8,8 +8,8 @@ sp500_index:
       schema: 'main'
       schemas_and_paths:
         main: 'sp500.db'
-      schema_directory: '${{ github.workspace }}'
+      schema_directory: '.'
       extensions:
-        - '${{ github.workspace }}/crypto.arm64'
+        - './crypto'
 
   target: dev
